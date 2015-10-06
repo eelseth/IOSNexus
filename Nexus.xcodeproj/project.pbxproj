@@ -14,6 +14,7 @@
 		0611EFB51BC36F8D0019779D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0611EFB31BC36F8D0019779D /* LaunchScreen.storyboard */; };
 		0611EFC01BC36F8D0019779D /* NexusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0611EFBF1BC36F8D0019779D /* NexusTests.swift */; };
 		0611EFCB1BC36F8D0019779D /* NexusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0611EFCA1BC36F8D0019779D /* NexusUITests.swift */; };
+		9FF1F56B2266BAC60264FC5F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC9668B3F2DD632DE55AFBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,10 @@
 		0611EFC61BC36F8D0019779D /* NexusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NexusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0611EFCA1BC36F8D0019779D /* NexusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NexusUITests.swift; sourceTree = "<group>"; };
 		0611EFCC1BC36F8D0019779D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0611EFD81BC372DE0019779D /* Nexus-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nexus-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E0F6E66DFE4A1C0DC305762 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A6CC01631EBDAFE8CBA5C0D7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FCC9668B3F2DD632DE55AFBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF1F56B2266BAC60264FC5F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,8 @@
 				0611EFBE1BC36F8D0019779D /* NexusTests */,
 				0611EFC91BC36F8D0019779D /* NexusUITests */,
 				0611EFA81BC36F8D0019779D /* Products */,
+				7FE25C413A92035E228F4CF6 /* Pods */,
+				2B62372D1607F9522A6A58EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +111,7 @@
 				0611EFB11BC36F8D0019779D /* Assets.xcassets */,
 				0611EFB31BC36F8D0019779D /* LaunchScreen.storyboard */,
 				0611EFB61BC36F8D0019779D /* Info.plist */,
+				0611EFD81BC372DE0019779D /* Nexus-Bridging-Header.h */,
 			);
 			path = Nexus;
 			sourceTree = "<group>";
@@ -125,6 +134,23 @@
 			path = NexusUITests;
 			sourceTree = "<group>";
 		};
+		2B62372D1607F9522A6A58EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCC9668B3F2DD632DE55AFBC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FE25C413A92035E228F4CF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6CC01631EBDAFE8CBA5C0D7 /* Pods.debug.xcconfig */,
+				7E0F6E66DFE4A1C0DC305762 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0611EFCF1BC36F8D0019779D /* Build configuration list for PBXNativeTarget "Nexus" */;
 			buildPhases = (
+				A3FCB5E1E2A329ECECC48E53 /* Check Pods Manifest.lock */,
 				0611EFA31BC36F8D0019779D /* Sources */,
 				0611EFA41BC36F8D0019779D /* Frameworks */,
 				0611EFA51BC36F8D0019779D /* Resources */,
+				AB178998631FA2F6B48E70E8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,6 +215,7 @@
 		0611EF9F1BC36F8D0019779D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = eelSeth;
 				TargetAttributes = {
@@ -249,6 +278,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3FCB5E1E2A329ECECC48E53 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB178998631FA2F6B48E70E8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0611EFA31BC36F8D0019779D /* Sources */ = {
@@ -396,23 +458,30 @@
 		};
 		0611EFD01BC36F8D0019779D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6CC01631EBDAFE8CBA5C0D7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Nexus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eelseth.Nexus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nexus/Nexus-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		0611EFD11BC36F8D0019779D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E0F6E66DFE4A1C0DC305762 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Nexus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eelseth.Nexus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nexus/Nexus-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -483,6 +552,7 @@
 				0611EFD11BC36F8D0019779D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0611EFD21BC36F8D0019779D /* Build configuration list for PBXNativeTarget "NexusTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +561,7 @@
 				0611EFD41BC36F8D0019779D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0611EFD51BC36F8D0019779D /* Build configuration list for PBXNativeTarget "NexusUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +570,7 @@
 				0611EFD71BC36F8D0019779D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
